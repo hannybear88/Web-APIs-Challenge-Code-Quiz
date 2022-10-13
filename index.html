@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API Challenge: Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css"
+    <link  rel="stylesheet" href= "<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>"
+    <!--Get your own code at fontawesome.com-->"
+
+<!-- comment line-->
+<!-- comment line -->
+
+</head>
+<body>
+    <!-- Begin Quiz Button-->
+    <div class="begin_btn"><button>Begin Quiz</button></div>
+
+    <!-- Quiz Rules Box -->
+    <div class="quiz_rules_box">
+        <div class="quiz_rules_title">
+            <span>Rules of this Quiz</span>
+        </div>
+        <div class="quiz_rules_list">
+            <div class = "quizrules">1. You will given <span> 15 seconds</span>to answer each question.</div>
+            <div class = "quizrules">2. Once you select an answer, you can't change your answer.</div>
+            <div class = "quizrules">3. You will lose <span> 5 seconds</span> for each question you answer incorrectly.</div>
+            <div class = "quizrules">4. You will not be able to exit the quiz once you click begin quiz.</div>
+            <div class = "quizrules">5. You will be given a score of how you did on the quiz.</div>
+            <div class = "quizrules">6. You will be asked to put in your initials after taking the quiz.</div>
+            <div class = "quizrules">7. You may save your previous scores.</div>
+            <div class = "quizrules">8. You may retake the quiz.</div>
+       </div>
+       <div class="buttons">
+       <button class="leave">Leave Quiz</button>
+       <button class="restart">Continue Quiz</button>
+        </div>
+    </div>
+
+    <!-- Quiz Timer -->
+    <div class="quiz_timer">
+        <header>
+            <div class="titleofquiz">API Quiz Application</div>
+            <div class="timer">
+                <div class="ticktock_text">Time leftover</div>
+                <div class="ticktock_seconds">15</div>
+            </div>
+        </header>
+        <section>
+            <div class="questions_text">
+                <span>1. Arrays in JavaScript can be used to store ________.</span>
+            </div>
+            <div class="choices_list">
+                <div class="choices">
+                    <span>A. Numbers and Strings</span>
+                    <div class="sad-cry"><i class='far fa-sad-cry'></i></div>
+            </div>
+            <div class="choices">
+                    <span>B. Other Arrays</span>
+                    <div class="sad-cry"><i class='far fa-sad-cry'></i></div>
+            </div>
+            <div class="choices">
+                    <span>C. Booleans</span>
+                    <div class="emoji sad-cry"><i class='far fa-sad-cry'></i></div>
+            </div>
+            <div class="choices">
+                    <span>D. All of the Above </span>
+                    <div class="emoji grin-beam"><i class='far fa-grin-beam'></i></div>
+         </div>
+        </section>
+
+        <!-- Footer of Quiz Box-->
+        <Footer>
+            <div class="total_questions">
+                <span><p>1</p>Of<p>10</p>Questions</span>
+            </div>
+            <button class="nxt_btn">Next Question</button>
+        </Footer>
+    </div>
+</body>
+</html>

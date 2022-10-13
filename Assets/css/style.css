@@ -1,0 +1,254 @@
+/* Google fonts*/
+@import url('https://fonts.google.com/specimen/Indie+Flower/tester');
+*{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body{
+    background: rgb(112, 81, 112);
+}
+
+.begin_btn,
+.quiz_rules_box,
+.quiz_timer{
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%)
+}
+
+/* */
+.begin_btn button{
+    font-size: 50px;
+    font-weight: 600px;
+    color:purple;
+    padding: 35px 35px;
+    border-radius:15px;
+    background:gray;
+    cursor:pointer;
+}
+
+.quiz_rules_box{
+    width: 650px;
+    height: 400px;
+    background:rgb(108, 113, 116);
+    border-radius:15px;
+    display:none; 
+}
+
+.quiz_rules_box .quiz_rules_title{
+    height: 100px;
+    width: 100%;
+    border-bottom: 10px solid darkgray;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 43px;
+    font-weight: 600;
+}
+
+.quiz_rules_box .quiz_rules_list{
+    padding: 12px 35px;
+
+}
+
+.quiz_rules_box .quiz_rules_list .quizrules{
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.quiz_rules_box .quiz_rules_list .quizrules span{
+    font-weight: 600;
+    color:rgb(102, 16, 102);
+}
+
+.quiz_rules_box .buttons{
+    height:68px;
+    display: flex;
+    align-items: center; 
+    justify-content:flex-end;
+    padding: 0 40px;
+    border-top: 10px solid darkgrey;
+}
+
+.quiz_rules_box  .buttons button{
+    margin: 0 10px;
+    height: 40px;
+    width: 450px;
+    border:1px solid rgb(184, 119, 184);
+    background: rgb(184, 119, 184);
+    border-radius: 5px;
+    font-size:16px;
+    font-weight:500;
+    cursor:pointer;
+    transition: all 0.10s ease;
+}
+
+.buttons button.restart{
+    color:rgb(145, 77, 145);
+    background-color:rgb(132, 53, 132);
+}
+
+.buttons button.restart:hover{
+    background-color:purple;
+}
+
+.buttons button.leave{
+    color: rgb(176, 72, 176); 
+    background-color:rgb(56, 18, 56);
+}
+
+.buttons button.leave:hover{
+    background-color: purple; 
+}
+
+.quiz_timer{
+    width: 550px;
+    background-color:gray;
+    border-radius: 5px;
+}
+
+.quiz_timer header{
+    position: relative;
+    z-index:99;
+    height: 70px;
+    padding: 0 30px;
+    background-color:gray;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgb(199, 151, 199);
+    position: relative;
+    z-index:99;
+}
+
+.quiz_timer header .titleofquiz{
+    font-size:30px;
+    font-weight:750;
+}
+
+.quiz_timer header .timer{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 145px;
+    height: 50px;
+    background-color:rgb(145, 71, 145);
+    border: 1px solid purple;
+    border-radius:10px;
+    padding: 0 8px;
+}
+
+
+.quiz_timer header .timer .ticktock_text{
+    font-weight: 500;
+    font-size: 20px;
+    user-select:none;
+}
+
+.quiz_timer header .timer .ticktock_seconds{
+    font-weight:500;
+    font-size: 20px;
+    background:rgb(165, 104, 165);
+    height:30px;
+    width:70px;
+    text-align:center;
+    line-height: 30px;
+    border-radius:7px;
+    border:1px solid purple;
+    user-select:none;
+}
+
+.quiz_timer section{
+    padding: 25px 30px 20px 30px;
+    background: rgb(72, 55, 72);
+}
+
+.quiz_timer section .questions_text{
+    font-size:30px;
+    font-weight:700;
+}
+
+.quiz_timer section .choices_list{
+    padding: 25px 10px;
+    display:block;
+}
+
+.quiz_timer section .choices_list .choices{
+    background-color: rgb(135, 96, 135);
+    border:1px solid rgb(51, 22, 51);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    cursor:pointer;
+    transition: all 0.10s ease;
+}
+
+Section .choices_list .choices:hover{
+color:rgb(35, 23, 35);
+background: rgb(193, 151, 193);
+border-color: rgb(24, 17, 24);
+}
+
+.option_list .option:last-child{
+    margin-bottom:0px;
+}
+
+.quiz_timer footer{
+    width: 60px;
+    height: 100%;
+    padding: 0 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_timer footer .total_questions span{
+    display:flex;
+    user-select: none;
+}
+
+.footer .total_questions span{
+    font-weight:500;
+    padding: 0 5px;
+}
+
+footer .total_questions span p:first-child{
+    padding-left: 0px;
+    
+}
+/* put this before quiz_timer footer*/
+/* fix once emojis show on quiz
+.choices_list .option .emoji{
+    height:50px; 
+    width: 50px;
+    border:2px solid transparent;
+    border-radius: 50%;
+    font-size: 20px
+    line-height 30px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.choices_list .choices .emoji.grin-beam
+border-color: green;
+color: green;
+background-color: green;
+
+.choices_list .choices .emoji.sad-cry
+border-color: red;
+color: red; 
+background-color: red; */
+
+
+
+
+
