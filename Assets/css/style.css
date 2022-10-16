@@ -1,5 +1,6 @@
 /* Google fonts*/
-@import url('https://fonts.google.com/specimen/Indie+Flower/tester');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nabla&family=Silkscreen&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float>');
 *{
 margin: 0;
 padding:0;
@@ -7,41 +8,54 @@ box-sizing: border-box;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+/*background color of body*/
 body{
     background: rgb(112, 81, 112);
 }
-
+/*  Placement of begin button, quiz rules box, quiz timer and final score box*/
 .begin_btn,
 .quiz_rules_box,
-.quiz_timer{
-position:absolute;
-top:50%;
-left:50%;
-transform: translate(-50%,-50%)
-}
+.quiz_timer,
+.final_score_box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 4px 8px 0 rgb(184, 119, 184);
+          }
+          
 
-/* */
+/* Style for Begin Button  */
 .begin_btn button{
     font-size: 50px;
     font-weight: 600px;
     color:purple;
+    background:gray;
     padding: 35px 35px;
     border-radius:15px;
-    background:gray;
     cursor:pointer;
+    outline: none;
+    border: none;
 }
 
+/*Style for Quiz Rules Box*/
 .quiz_rules_box{
     width: 650px;
     height: 400px;
     background:rgb(108, 113, 116);
     border-radius:15px;
-    display:none; 
+    /*display:none; */
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, 50%) (scale 1);
 }
 
+/*Style for Quiz Rules Box and Quiz Rules Title*/
 .quiz_rules_box .quiz_rules_title{
     height: 100px;
     width: 100%;
+    font-size: 43px;
+    font-weight: 600;
     border-bottom: 10px solid darkgray;
     display: flex;
     align-items: center;
@@ -50,21 +64,25 @@ transform: translate(-50%,-50%)
     font-weight: 600;
 }
 
+/* Padding for Quiz Rules Box and Quiz Rules List*/
 .quiz_rules_box .quiz_rules_list{
     padding: 12px 35px;
 
 }
 
+/*Layout and Font Size for Quiz Rules Box and Quiz Rules List*/
 .quiz_rules_box .quiz_rules_list .quizrules{
     margin: 5px 0;
     font-size: 17px;
 }
 
+/*15 seconds text bolded*/
 .quiz_rules_box .quiz_rules_list .quizrules span{
     font-weight: 600;
     color:rgb(102, 16, 102);
 }
 
+/* style for Leave Quiz and Continue Quiz Buttons */
 .quiz_rules_box .buttons{
     height:68px;
     display: flex;
@@ -74,6 +92,7 @@ transform: translate(-50%,-50%)
     border-top: 10px solid darkgrey;
 }
 
+/* style for Leave Quiz and Continue Quiz Buttons Button */
 .quiz_rules_box  .buttons button{
     margin: 0 10px;
     height: 40px;
@@ -87,30 +106,40 @@ transform: translate(-50%,-50%)
     transition: all 0.10s ease;
 }
 
+/* Font Color, Border Color, and Background for Restart Button */
 .buttons button.restart{
     color:rgb(145, 77, 145);
     background-color:rgb(132, 53, 132);
 }
 
+/* Restart Buttons Button Hover*/
 .buttons button.restart:hover{
     background-color:purple;
 }
 
+/* Font Color, Border Color, and Background for Leave Button */
 .buttons button.leave{
     color: rgb(176, 72, 176); 
     background-color:rgb(56, 18, 56);
 }
 
+/* Leave Buttons Button Hover*/
 .buttons button.leave:hover{
     background-color: purple; 
 }
 
+/*Quiz Timer Style*/
 .quiz_timer{
     width: 550px;
     background-color:gray;
     border-radius: 5px;
+    /* display:none; */
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, 50%) (scale 1);
 }
 
+/*Quiz Timer Header Style*/
 .quiz_timer header{
     position: relative;
     z-index:99;
@@ -126,11 +155,13 @@ transform: translate(-50%,-50%)
     z-index:99;
 }
 
+/*Quiz Timer Header and Title of Quiz font*/
 .quiz_timer header .titleofquiz{
     font-size:30px;
     font-weight:750;
 }
 
+/*Quiz Timer Header Timer Style*/
 .quiz_timer header .timer{
     display:flex;
     align-items:center;
@@ -143,17 +174,19 @@ transform: translate(-50%,-50%)
     padding: 0 8px;
 }
 
-
+/*Quiz Timer Header Timer Ticktock Text font*/
 .quiz_timer header .timer .ticktock_text{
     font-weight: 500;
     font-size: 20px;
     user-select:none;
 }
 
+/*Quiz Timer Header Timer Ticktock Seconds Style*/
 .quiz_timer header .timer .ticktock_seconds{
     font-weight:500;
     font-size: 20px;
     background:rgb(165, 104, 165);
+    color:purple;
     height:30px;
     width:70px;
     text-align:center;
@@ -198,7 +231,7 @@ background: rgb(193, 151, 193);
 border-color: rgb(24, 17, 24);
 }
 
-.option_list .option:last-child{
+.choices_list .choices:last-child{
     margin-bottom:0px;
 }
 
@@ -216,15 +249,91 @@ border-color: rgb(24, 17, 24);
     user-select: none;
 }
 
-.footer .total_questions span{
+.footer .total_questions span p{
     font-weight:500;
     padding: 0 5px;
 }
 
-footer .total_questions span p:first-child{
+.total_questions span p:first-child{
     padding-left: 0px;
-    
 }
+
+footer .next_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: purple;
+    color:blueviolet; 
+    border: 1px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.10s ease; 
+    }
+
+footer .next_btn:hover{
+    background:purple;
+}
+
+.final_score_box{
+    background: purple;
+    width: 530px;
+    padding: 25px 25px;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align: center;
+    flex-direction:column;
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, 50%) (scale 1);
+}
+
+.final_score_box .emoji{
+    font-size:200px;
+    color:purple;
+    margin-bottom:20px;
+}
+
+.final_score_box .conclusion_text{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.final_score_box .final_score_text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.final_score_text span p{
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.final_score_box buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.final_score_box .buttons button{
+    margin: 0 30px;
+    height: 48px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-size:25px;
+    font-weight:500;
+    border-radius: 10px solid purple;
+    border: 10px solid purple;
+    cursor: pointer;
+    transition: all 0.10s ease;
+}
+
 /* put this before quiz_timer footer*/
 /* fix once emojis show on quiz
 .choices_list .option .emoji{

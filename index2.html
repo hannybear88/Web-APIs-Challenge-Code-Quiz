@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API Challenge: Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style2.css">
+     <!-- Icons from fontawesome.com -->
+     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+    <!-- fonts from  Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nabla&family=Silkscreen&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href= https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float rel="stylesheet">
+
+</head>
+<body>
+     <!-- Begin Quiz Button-->
+    <div class="begin_btn"><button>Begin Quiz</button></div>
+
+    <!-- Quiz Rules Box -->
+    <div class="quiz_rules_box">
+        <div class="quiz_rules_title">
+            <span>The Rules of This Quiz</span>
+        </div>
+        <div class="quiz_rules_list">
+            <div class = "quizrules">1. You will given <span> 15 seconds </span>to answer each question.</div>
+            <!-- /* <div class= "font-effect-shadow-multiple">15 seconds</div> */ -->
+            <div class = "quizrules">2. Once you <span> select </span> an answer, you <span> can't </span> change your answer.</div>
+            <div class = "quizrules">3. You will <span> lose 5 seconds </span> for each question you answer <span> incorrectly.</span></div>
+            <div class = "quizrules">4. You will <span> not </span> be able to <span> exit the quiz once you click begin quiz.</span></div>
+            <div class = "quizrules">5. You will <span> not </span> be able to select any other button once the <span>timer starts.</span></div>
+            <div class = "quizrules">6. You will be given a score of how you did on the quiz.</div>
+            <div class = "quizrules">7. You will be asked to put in your initials after taking the quiz.</div>
+            <div class = "quizrules">8. You may save your previous scores.</div>
+            <div class = "quizrules">9. You may retake the quiz as many times as you'd like.</div>
+        </div>
+
+         <!-- buttons for leave quiz and continue quiz -->
+        <div class="buttons">
+            <button class="leave">Leave Quiz</button>
+            <button class="restart">Continue Quiz</button>
+        </div>
+    </div>
+    
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <!-- Title of Quiz -->
+            <div class="titleofquiz">API Quiz Application</div>
+            <div class="timer">
+                <!--Time leftover text -->
+                <div class="ticktock_text">Time leftover</div>
+                <!--How many seconds are left shown-->
+                <div class="ticktock_seconds">15</div>
+            </div>
+        </header>
+        <section>
+            <!--Questions are shown here-->
+            <div class="questions_text">
+                <span>1. Arrays in JavaScript can be used to store ________.</span>
+            </div>
+            <!--Choices of answers to choose from shown here -->
+            <div class="choices_list">
+                <div class="choices">
+                    <span>A. Numbers and Strings</span>
+                    <div class="emoji sad cry"><i class='far fa-sad-tear' style='font-size:36px'></i></div>
+                </div>
+                <div class="choices">
+                    <span>B. Other Arrays</span>
+                    <div class="emoji sad cry"><i class='far fa-sad-tear' style='font-size:36px'></i></div>
+                </div>
+                <div class="choices">
+                    <span>C. Booleans</span>
+                    <div class="emoji sad cry"><i class='far fa-sad-tear' style='font-size:36px'></i></div>
+                </div>
+                <div class="choices">
+                    <span>D. All of the Above </span>
+                    <div class="emoji grin stars"><i class='far fa-grin-stars' style='font-size:36px'></i></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

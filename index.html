@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web API Challenge: Code Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css"
-    <link  rel="stylesheet" href= "<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>"
-    <!--Get your own code at fontawesome.com-->"
-
-<!-- comment line-->
-<!-- comment line -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+     <!-- Icons from fontawesome.com -->
+    <link rel="stylesheet" href= <"script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script">
+    
+    <!-- fonts from  Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nabla&family=Silkscreen&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href= https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float rel="stylesheet">
 
 </head>
 <body>
@@ -20,18 +21,23 @@
     <!-- Quiz Rules Box -->
     <div class="quiz_rules_box">
         <div class="quiz_rules_title">
-            <span>Rules of this Quiz</span>
+            <span>The Rules of This Quiz</span>
         </div>
         <div class="quiz_rules_list">
             <div class = "quizrules">1. You will given <span> 15 seconds</span>to answer each question.</div>
-            <div class = "quizrules">2. Once you select an answer, you can't change your answer.</div>
+            <div class= "font-effect-shadow-multiple">15 seconds</div>
+            <div class = "quizrules">2. Once you <span> select</span> an answer, you <span> can't</span>change your answer.</div>
             <div class = "quizrules">3. You will lose <span> 5 seconds</span> for each question you answer incorrectly.</div>
             <div class = "quizrules">4. You will not be able to exit the quiz once you click begin quiz.</div>
-            <div class = "quizrules">5. You will be given a score of how you did on the quiz.</div>
-            <div class = "quizrules">6. You will be asked to put in your initials after taking the quiz.</div>
-            <div class = "quizrules">7. You may save your previous scores.</div>
-            <div class = "quizrules">8. You may retake the quiz.</div>
-       </div>
+            <div class = "quizrules">5. You will not be able to select any other button once the timer starts. </div>
+            <div class = "quizrules">6. You will be given a score of how you did on the quiz.</div>
+            <div class = "quizrules">7. You will be asked to put in your initials after taking the quiz.</div>
+            <div class = "quizrules">8. You may save your previous scores.</div>
+            <div class = "quizrules">9. You may retake the quiz.</div>
+        </div>
+    </div>
+
+       <!-- buttons for leave quiz and continue quiz -->
        <div class="buttons">
        <button class="leave">Leave Quiz</button>
        <button class="restart">Continue Quiz</button>
@@ -41,33 +47,39 @@
     <!-- Quiz Timer -->
     <div class="quiz_timer">
         <header>
+            <!-- Title of Quiz -->
             <div class="titleofquiz">API Quiz Application</div>
             <div class="timer">
+                <!--Time leftover text -->
                 <div class="ticktock_text">Time leftover</div>
+                <!--How many seconds are left shown-->
                 <div class="ticktock_seconds">15</div>
             </div>
         </header>
         <section>
+            <!--Questions are shown here-->
             <div class="questions_text">
                 <span>1. Arrays in JavaScript can be used to store ________.</span>
             </div>
+            <!--Choices of answers to choose from shown here -->
             <div class="choices_list">
                 <div class="choices">
                     <span>A. Numbers and Strings</span>
-                    <div class="sad-cry"><i class='far fa-sad-cry'></i></div>
-            </div>
-            <div class="choices">
+                    <div class="emoji sad-cry"><i class="fa fa-sad-cry"></i></div>
+                </div>
+                <div class="choices">
                     <span>B. Other Arrays</span>
-                    <div class="sad-cry"><i class='far fa-sad-cry'></i></div>
-            </div>
-            <div class="choices">
+                    <div class="emoji sad-cry"><i class="fa fa-sad-cry"></i></div>
+                </div>
+                <div class="choices">
                     <span>C. Booleans</span>
-                    <div class="emoji sad-cry"><i class='far fa-sad-cry'></i></div>
-            </div>
-            <div class="choices">
+                    <div class="emoji sad-cry"><i class="fa fa-sad-cry"></i></div>
+                </div>
+                <div class="choices">
                     <span>D. All of the Above </span>
-                    <div class="emoji grin-beam"><i class='far fa-grin-beam'></i></div>
-         </div>
+                    <div class="emoji grin-beam"><i class="fa fa-grin-beam"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Footer of Quiz Box-->
@@ -77,6 +89,22 @@
             </div>
             <button class="nxt_btn">Next Question</button>
         </Footer>
+    </div>
+        <!-- Final Score Box -->
+        <div class="final_score_box">
+            <div class="emoji">
+                <i class='fas fa-trophy'></i>
+        </div>
+        <!--Conclusion of the quiz text shown here -->
+        <div class="conclusion_text">Congratulations! You have completed the quiz!</div> 
+        <div classs-"final_score_text">
+            <span>Oh no! Your score is <p>1</p> out of <p>5</p></span>
+        </div>
+        <!--Repeat Quiz and Leave Quiz buttons shown here -->
+        <div class="buttons">
+            <button class="restart">Repeat Quiz</button>
+            <button class="quit">Leave Quiz</button>
+        </div>
     </div>
 </body>
 </html>
