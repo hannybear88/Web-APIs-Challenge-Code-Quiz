@@ -26,6 +26,13 @@ body{
                 0px 8px 28px 0 rgb(184, 119, 184);
 }
 
+.quiz_rules_box.activeInfo{
+    z-index: 5; 
+    opacity:0;
+    pointer-events:auto;
+    transform:translate(-50%, 50%) (scale 1); 
+}
+
 /* Style for Begin Button  */
 .begin_btn button{
     font-size: 50px;
@@ -373,9 +380,6 @@ footer .next_btn:hover{
     cursor: pointer;
     transition: all 0.10s ease;
 }
-
-
-
 
 
 
