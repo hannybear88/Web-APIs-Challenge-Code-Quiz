@@ -1,0 +1,33 @@
+.choices-container {
+    font-size:20px;
+    background-color: rgb(135, 96, 135);
+    width:100%;
+    display:flex;
+    border:5px solid rgb(51, 22, 51);
+    margin:10px;
+    border-radius: 10px;
+    align-items:center;
+    margin-bottom: 20px;
+    cursor:pointer;
+    transition: all 0.10s ease;
+}
+
+.choices-container:hover {
+    box-shadow:none;
+    transform:none;
+    cursor:pointer;
+    transform: translate(5%,5%);
+    transition:transform 150ms;
+    box-shadow: 0px 4px 8px 0 rgb(184, 119, 184),
+    0px 8px 28px 0 rgb(184, 119, 184); 
+}
+
+.choices-prefix {
+    background-color:rgb(114, 17, 114);
+    padding: 15px 15px; 
+    height:100%;
+    color:rgb(206, 94, 206);
+} 
+.choices-text {
+    padding:15px;
+}
