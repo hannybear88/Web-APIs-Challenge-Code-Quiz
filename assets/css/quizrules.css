@@ -1,0 +1,123 @@
+.quiz_rules_btn{
+    font-size: 25px; 
+    font-weight:500;
+    width:200px;
+    color:rgb(234, 159, 234);
+    background:gray; 
+    text-align:center;
+    margin-bottom:10px;
+    padding: 25px 25px;
+    border:2px solid rgb(201, 149, 201);
+    text-decoration:none;
+    border-radius:15px;
+    cursor:pointer;
+    outline: none;
+    top:50%;
+    left:50%;
+    /*transform: translate(-50%,-50%);*/
+} 
+
+.quiz_rules_btn{
+    box-shadow:none;
+    transform:none;
+    cursor:pointer;
+     transform: translate(15%,15%);
+    transition:transform 150ms;
+    box-shadow: 0px 4px 8px 0 rgb(184, 119, 184),
+    0px 8px 28px 0 rgb(184, 119, 184); 
+}
+
+.quiz_rules_btn{
+    box-shadow:none;
+    transform:none;
+    cursor:not-allowed;
+} 
+
+
+
+
+
+.quiz_rules_box.activeInfo{
+    z-index: 5; 
+    opacity:0;
+    pointer-events:auto;
+    transform:translate(-50%, 50%) (scale 1); 
+}
+
+/*Style for Quiz Rules Box*/
+.quiz_rules_box{
+    width: 650px;
+    /*height: 400px;*/
+    background:rgb(108, 113, 116);
+    border-radius:15px;
+    display:none;
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, 50%) (scale 1); 
+}
+
+/*Style for Quiz Rules Box and Quiz Rules Title*/
+.quiz_rules_box .quiz_rules_title{
+    font-size: 43px;
+    font-weight: 600;
+    height: 100px;
+    width: 100%;
+    border-bottom: 5px solid rgb(176, 125, 200);
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+}
+
+/*Style for Quiz Rules Box and Quiz Rules Title*/
+.quiz_rules_box .quiz_rules_title{
+    font-size: 43px;
+    font-weight: 600;
+    height: 100px;
+    width: 100%;
+    border-bottom: 5px solid rgb(176, 125, 200);
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+}
+
+/* Padding for Quiz Rules Box and Quiz Rules List*/
+.quiz_rules_box .quiz_rules_list{
+    padding: 25px 45px;
+}
+
+/*Layout and Font Size for Quiz Rules Box and Quiz Rules List*/
+.quiz_rules_box .quiz_rules_list .quizrules{
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/*bolded text in quiz rules box*/
+.quiz_rules_box .quiz_rules_list .quizrules span{
+    font-weight: 600;
+    color:rgb(102, 16, 102);
+}
+
+/* style for Leave Quiz and Continue Quiz Buttons */
+.quiz_rules_box .buttons{
+    height:68px;
+    display: flex;
+    align-items: center; 
+    justify-content:flex-end;
+    padding: 0 40px;
+    border-top: 5px solid rgb(176, 125, 200);
+}
+
+/* style for Leave Quiz and Continue Quiz Buttons Button */
+.quiz_rules_box  .buttons button{
+    font-size:16px;
+    font-weight:500;
+    margin: 0 10px;
+    height: 40px;
+    width: 450px;
+    color: rgb(194, 162, 194);
+    background: rgb(154, 86, 154);
+    border:1px solid rgb(172, 91, 172);
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.10s ease;
+}
