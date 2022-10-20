@@ -1,5 +1,5 @@
 const question = document.getElementById("questions");
-const choice = Array.from(document.getElementsbyClassName("choice-text"));
+const choices = Array.from(document.getElementsbyClassName("choices-text"));
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -9,116 +9,106 @@ let availableQuestions = [];
 
 let questions = [
     {
-    number: 1,
     question: "Arrays in JavaScript can be used to store ________.",
     choice: {
-        A: 'Numbers and Strings',
-        B: 'Other Arrays',
-        C: 'Booleans',
-        D: 'All of the Above',
+        choice1: 'A. Numbers and Strings',
+        choice2: 'B. Other Arrays',
+        choice3: 'C. Booleans',
+        choice4: 'D. All of the Above',
     },
-    correctAnswer: 'D'
+    correctAnswer: 4 // 'D. All of the Above'
 },
     {
-    number: 2, 
     question: "String Values must be enclosed with _______ when being assigned to variables.",
     choice: {
-        A: 'Commas',
-        B: 'Curly Brackets',
-        C: 'Quotes', 
-        D: 'Parenthesis',
+        choice1: 'A. Commas',
+        choice2: 'B. Curly Brackets',
+        choice3: 'C. Quotes', 
+        choice4: 'D. Parenthesis',
     },
-    correctAnswer: 'Quotes',
+    correctAnswer: 3 //'C. Quotes',
 },
     {
-    number: 3, 
     question: "Commonly used data types DO NOT include:",
     choice: {
-        A: 'Strings',
-        B: 'Booleans',
-        C: 'Alerts',
-        D: 'Numbers',
+        choice1: 'A. Strings',
+        choice2: 'B. Booleans',
+        choice3: 'C. Alerts',
+        choice4: 'D. Numbers',
     },
-    correctAnswer: 'Alerts',
+    correctAnswer: 3 // 'C. Alerts',
 },
     {
-    number: 4, 
     question: "A very useful tool use during development and debugging for printing content to the debugger is:",
     choice: {
-        A: 'JavaScript',
-        B: 'Terminal/Bash',
-        C: 'For Loops',
-        D: 'Console.Log',
+        choice1: 'A. JavaScript',
+        choice2: 'B. Terminal/Bash',
+        choice3: 'C. For Loops',
+        choice4: 'D. Console.Log',
     },
-    correctAnswer: 'Console.Log',
+    correctAnswer: 4 // 'D. Console.Log',
  },
     {
-    number: 5, 
     question: "The condition in an if / else statement is enclosed with ___________. ",
     choice: {
-        A: 'Quotes',
-        B: 'Curly Brackets',
-        C: 'Parenthesis',
-        D: 'Square Brackets',
+        choice1: 'A. Quotes',
+        choice2: 'B. Curly Brackets',
+        choice3: 'C. Parenthesis',
+        choice4: 'D. Square Brackets',
             },
-    correctAnswer: 'Parenthesis',
+    correctAnswer: 3 // 'C. Parenthesis',
 },
 
     {
-    number: 6, 
     question: "Which of the following two CSS properties are used to set an HTML element’s foreground color and background color, respectively?",
     choice: {
-        A: 'Foreground-Color and Background-Color',
-        B: 'Color and Background-Color',
-        C: 'Color-Foreground and Color-Background',
-        D: 'Color-Font and Color-Back',
-    correctAnswer: 'Color and Background-Color',
+        choice1: 'A. Foreground-Color and Background-Color',
+        choice2: 'B. Color and Background-Color',
+        choice3: 'C. Color-Foreground and Color-Background',
+        choice4: 'D. Color-Font and Color-Back',
+    correctAnswer: 2 // 'B. Color and Background-Color',
     },
 },
     {
-    number: 7, 
     question: "What is the correct definition of an HTML element?",
    choice: {
-        A: 'The first, or opening, HTML tag',
-        B: 'HTML code that does not requir opening or closing tags',
-        C: 'An HTML tag adn the content that it contains or marks up',
-        D: 'The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.',
+        choice1: 'A. The first, or opening, HTML tag',
+        choice2: 'B. HTML code that does not requir opening or closing tags',
+        choice3: 'C. An HTML tag adn the content that it contains or marks up',
+        choice4: 'D. The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.',
    },
-    correctAnswer: 'An HTML tag and the content that it contains or marks up',
+    correctAnswer: 3 // 'C. An HTML tag and the content that it contains or marks up',
 },
     {
-    number: 8, 
     question: "What is a directory?",
     choice: {
-        A: 'A folder used to store files.',
-        B: 'A Tree Structure',
-        C: 'A command to a computer',
-        D: 'A file',
+        choice1: 'A. A folder used to store files.',
+        choice2: 'B. A Tree Structure',
+        choice3: 'C. A command to a computer',
+        choice4: 'D. A file',
     },
-    correctAnswer: 'A folder used to store files.',
+    correctAnswer: 1 // 'A. A folder used to store files.',
     
 },
     {
-    number: 9, 
     question: "What does API stand for?",
     choice: {
-        A: 'Application Processes Integration',
-        B: 'Application Programming Interface',
-        C: 'Application Platform Interface',
-        D: 'Application Programmer Interface',
+        choice1: 'A. Application Processes Integration',
+        choice2: 'B. Application Programming Interface',
+        choice3: 'C. Application Platform Interface',
+        choice4: 'D. Application Programmer Interface',
     },
-    correctAnswer: 'Application Programming Interface',
+    correctAnswer: 2 //'B. Application Programming Interface',
 },
     {
-    number: 10, 
     question: "S What does CSS stand for?",
     choice: {
-        A: 'Computer Systems Support',
-        B: 'Custom Style Sheet',
-        C: 'Computer SoftwareServices',
-        D: 'Cascading Style Sheet',
+        choice1: 'A. Computer Systems Support',
+        choice2: 'B. Custom Style Sheet',
+        choice3: 'C. Computer SoftwareServices',
+        choice4: 'D. Cascading Style Sheet',
     },
-    correctAnswer: 'Cascading Style Sheet',
+    correctAnswer:4 // 'D. Cascading Style Sheet',
     }
 ];
 
@@ -127,27 +117,60 @@ const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
 
 startGame = () => {
-    questionsCounter = 0;
+    questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions];
-    console.log(availableQuestions);
+    availableQuestions = [ ...questions];
     getNewQuestion();
 };
 
 getNewQuestion = () => {
+            if(availableQuestions.length === 0 || questionsCounter >= MAX_QUESTIONS) {
+        //go to the end of the page
+        return window.location.assign("/end.html");
+            }
     questionCounter++;
-    Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = avialableQuestins[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestoins.length);
+    currentQuestion = avaialableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    choices.forEach( choice => {
-        questionCounter++;
-        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-        currentQuestion = availableQuestions[questionIndex];
-        question.innerText = currentQuestion.question;
+    
+    choices.forEach(choice => {
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number];
+    });
 
-        choices.ForEach( choice => {
-            const number = choice.dataset['number'];
-            choice.innerText = currentQuestion['choice' + number];
-        })  
+    availableQuestions.splice(questionIndex, 1);
+    acceptingAnswers = true;
 };
+
+choices.forEach (choice => {
+    choice.addEventListen("click", e => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChocie.dataset["number"];
+
+        const classToApply = 'incorrect';
+        if(selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
+        }
+      // const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        
+        // console.log(selectedAnswer == currentQuestion.answer);
+
+         selectedChoice.parentElement.classList.add(classToApply);
+        
+         setTimeout() => {
+         selectedChoice.parentElement.classList.remove(classToApply);
+         getNewQuestion();
+        }, 1000)
+    });
+});
+
+
+
+startGame();  
+       
+
+        
