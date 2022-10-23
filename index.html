@@ -15,14 +15,160 @@
 
 </head>
 <body>
-     <!-- Begin Quiz Button and Highscores Button-->
-     <div class = "container">
-        <div id = "home" class = "flex-center flex-column">
-            <h1>Coding Challenge Quiz</h1>
-            <a class="begin_btn" href="gameindex.html">Begin Quiz</a>
-            <a class="quiz_rules_btn" href="quizrules.html">Quiz Rules</a>
-            <a class="highscores_btn" href="hkchighscores.html">High Scores</a>
-     </div>
+     <!-- Begin Quiz Button-->
+    <div class="buttons">
+        <div class="begin_btn"><button>Begin Quiz</button></div>
+        <div class="hi_score_btn"><button>View High Scores</button></div>
+    </div>
+
+
+    <!-- Quiz Rules Box -->
+    <div class="quiz_rules_box">
+        <div class="quiz_rules_title">
+            <span>The Rules of This Quiz</span>
         </div>
+        <div class="quiz_rules_list">
+            <div class = "quizrules">1. You will given <span> 15 seconds </span>to answer each question.</div>
+            <!-- /* <div class= "font-effect-shadow-multiple">15 seconds</div> */ -->
+            <div class = "quizrules">2. Once you <span> select </span> an answer, you <span> can't </span> change your answer.</div>
+            <div class = "quizrules">3. You will <span> lose 15 seconds </span> for each question you answer <span> incorrectly.</span></div>
+            <div class = "quizrules">4. You will <span> not </span> be able to <span> exit the quiz once you click begin quiz.</span></div>
+            <div class = "quizrules">5. You will <span> not </span> be able to select any other button once the <span>timer starts.</span></div>
+            <div class = "quizrules">6. You will be given a score of how you did on the quiz.</div>
+            <div class = "quizrules">7. You will be asked to put in your initials after taking the quiz.</div>
+            <div class = "quizrules">8. You may save your previous scores.</div>
+            <div class = "quizrules">9. You may retake the quiz as many times as you'd like.</div>
+        </div>
+
+         <!-- buttons for leave quiz and continue quiz -->
+        <div class="buttons">
+            <button class="leave">Leave Quiz</button>
+            <button class="continue">Continue to Quiz</button>
+        </div>
+    </div>
+
+
+
+
+    <!-- High Score Box -->
+    <div class="hi_score_box inactive">
+        <div class="quiz_rules_title hi_score_title">
+            <span>High Scores</span>
+        </div>
+        <ol class="score_list">
+            <li class = "score_entry">Alec </li>
+            <li class = "score_entry">Beth </li>
+            <li class = "score_entry">Carl </li>
+            <li class = "score_entry">Dave </li>
+            <li class = "score_entry">Esau </li>
+            <li class = "score_entry">Fred </li>
+            <li class = "score_entry">Greg </li>
+            <li class = "score_entry">Hank </li>
+            <li class = "score_entry">Iggy </li>
+            <li class = "score_entry">Jake </li>
+        </ol>
+
+         <!-- buttons for leave quiz and continue quiz -->
+        <div class="buttons">
+            <button class="main_menu">Leave Quiz</button>
+            <button class="clear">Clear Scores</button>
+        </div>
+    </div>
+
+
+
+    
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <!-- Title of Quiz -->
+            <div class="titleofquiz">API Quiz Application</div>
+            <div class="timer">
+                <!--Time leftover text -->
+                <div class="ticktock_text">Time Remaining</div>
+                <!--How many seconds are left shown-->
+                <div class="ticktock_seconds">Init...</div>
+            </div>
+        </header>
+
+        <section>
+            <!--Questions are shown here-->
+            <div class="question_text">
+                <span>1. Arrays in JavaScript can be used to store ________.</span>
+            </div>
+            <!--Choices of answers to choose from shown here -->
+            <div class="choices_list">
+                <div class="choices">
+                    <span>A. Numbers and Strings</span>
+                    <!-- <div class="emoji sadtear"><i class='far fa-sad-tear' style='font-size:36px'></i></div> -->
+                </div>
+                <div class="choices">
+                    <span>B. Other Arrays</span>
+                    <!-- <div class="emoji sadtear"><i class='far fa-sad-tear' style='font-size:36px'></i></div> -->
+                </div>
+                <div class="choices">
+                    <span>C. Booleans</span>
+                    <!-- <div class="emoji sadtear"><i class='far fa-sad-tear' style='font-size:36px'></i></div> -->
+                </div>
+                <div class="choices">
+                    <span>D. All of the Above </span>
+                    <!-- <div class="emoji grinstars"><i class='far fa-grin-stars' style='font-size:36px'></i></div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer of Quiz Box-->
+         <footer>
+            <div class="total_questions">
+                <span><p>1</p>Of<p>10</p>Questions</span>
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+
+
+
+    <!-- Final Score Box -->
+    <div class="final_score_box">
+        <div class="emoji">
+            <i class='fas fa-trophy'></i>
+        </div>
+    <!--Conclusion of the quiz text shown here -->
+        <div class="conclusion_text">Congratulations!<br>You have completed the quiz!</div> 
+        <div class="final_score_text">
+            <span>Oh no! Your score is only <p>1</p> out of <p>5</p></span>
+        </div>
+    <!--Repeat Quiz and Leave Quiz buttons shown here -->
+        <div class="buttons">
+            <button class="enter_score">Enter Score</button>
+            <button class="quit">Quit Quiz</button>
+            <!-- <button class="quit">Quit Quiz</button> -->
+        </div>
+    </div>
+     <!---->
+
+
+
+
+
+     <!-- Enter Hi Score Box -->
+     <div class="enter_score_box inactive">
+        <!-- Form for entering Hi Score -->
+        <form class="score_form">
+            <label for="name">Enter Initial</label> 
+            <input type="text" name="name">
+            <div class="buttons">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+     <!--  -->
+
+
+
+
+     <script src="js/script.js"></script>
+ </body>
+
 </body>
-</html>
