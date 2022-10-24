@@ -36,6 +36,7 @@ body{
     flex-direction: column;
 }
 
+
 /* Style for Begin and High Score Button  */
 .begin_btn button, .hi_score_btn button{
     font-weight: 600px;
