@@ -2,19 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nabla&family=Silkscreen&family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float>');
 *{
-margin: 0;
-padding:0;
-box-sizing: border-box;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 /*background color of body*/
 body{
-    /* background: rgb(112, 81, 105); */
     background: rgb(137, 65, 155);
 }
-/*  Placement of begin button, quiz rules box, high score box, quiz timer and final score box*/
-.begin_btn,
-.hi_score_btn,
+/*  Placement of main button container, quiz rules box, high score box, quiz timer and final score box*/
+.main_buttons,
 .quiz_rules_box,
 .hi_score_box,
 .quiz_box,
@@ -29,10 +27,6 @@ body{
                 0px 8px 28px 0 rgb(184, 119, 184);
 }
 
-.DEBUG_HIDE {
-    opacity: 0;
-}
-
 .quiz_rules_box.activeInfo{
     z-index: 5; 
     opacity: 100%;
@@ -40,42 +34,25 @@ body{
     transform:translate(-50%, 50%) (scale 1); 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-/* Style for Begin Button  */
+/* Style for Begin and High Score Button  */
 .begin_btn button, .hi_score_btn button{
-    font-size: 50px;
     font-weight: 600px;
     color: plum;
     background:gray;
-    padding: 35px 35px;
+    font-size: 3rem;
+    padding: 3vh;
     border-radius:15px;
     border: none;
     cursor:pointer;
     outline: none;
 }
 
-/* Style for High Score Button  */
-.hi_score_btn, .hi_score_btn button{
-    top:50%;
-    left:50%;
-    transform: translate(-50%, 120%);
-}
-
-.hi_score_btn button{
-    position: absolute;
-    font-size: 20px;
-    padding: 0;
-    width: 15rem;
-    height: 5rem;
-    transform: translate(-50%, 120%);
-}
-
 /*Style for Quiz Rules Box, Enter Score Box, and High Score Box*/
 .quiz_rules_box, .hi_score_box, .enter_score_box{
-    width: 650px;
-    height: 635px;
+    max-width: 650px;
+    min-height: 635px;
     background:rgb(108, 113, 116);
     border-radius:15px;
     opacity: 0;
@@ -85,18 +62,15 @@ body{
 
 /* Style for High Score Box  */
 .hi_score_box {
-    font-size: 43px;
     font-weight: 600;
     border-bottom: 5px solid rgb(176, 125, 200);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 35px;
 }
 
 /*Style for Quiz Rules Box and Quiz Rules Title*/
 .quiz_rules_box .quiz_rules_title{
-    font-size: 43px;
     font-weight: 600;
     height: 100px;
     width: 100%;
@@ -104,38 +78,32 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 35px;
-}
-/* Padding for Quiz Rules Box and Quiz Rules List*/
-.quiz_rules_box .quiz_rules_list{
-    padding: 25px 45px;
 }
 /*Layout and Font Size for Quiz Rules Box and Quiz Rules List*/
 .quiz_rules_box .quiz_rules_list .quizrules{
     margin: 15px 0;
-    font-size: 18px;
 }
 /*bolded text in quiz rules box*/
 .quiz_rules_box .quiz_rules_list .quizrules span{
     font-weight: 600;
     color:plum;
 }
-/* style for Leave Quiz and Continue Quiz Buttons */
-.quiz_rules_box .buttons{
-    height:68px;
+/* style for Buttons in Rules BOx and High Score Box */
+.quiz_rules_box .buttons, .hi_score_box .buttons {
     display: flex;
     align-items: center; 
-    justify-content:flex-end;
-    padding: 0 40px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 75vw;
     border-top: 5px solid rgb(176, 125, 200);
+    padding: 1rem 0;
 }
 /* style for Leave Quiz and Continue Quiz Buttons Button */
-.quiz_rules_box  .buttons button{
-    font-size:16px;
+.quiz_rules_box .buttons button{
     font-weight:500;
-    margin: 0 10px;
-    height: 40px;
-    width: 450px;
+    margin: 0 0.5rem;
+    max-height: 3.5rem;
+    min-width: 2rem;
     color: rgb(194, 162, 194);
     background: rgb(154, 86, 154);
     border:1px solid rgb(172, 91, 172);
@@ -153,14 +121,6 @@ body{
     color: white;
     background-color:rgb(202, 180, 202);
     cursor: pointer;
-}
-
-/* Style for Main menu, clear, and submit button */
-.main_menu, .clear, .submit {
-    width: 200px;
-    height: 100%;
-    border-radius: 0.5rem;
-    font-size: 16px;
 }
 
 /* Font Color, Border Color, and Background for Leave Button */
@@ -186,6 +146,7 @@ body{
 .quiz_box.activeQuiz{
     z-index: 5; 
     opacity: 100%;
+    padding: 0;
     pointer-events:auto;
     transform:translate(-50%, 50%) (scale 1); 
 }
@@ -194,7 +155,7 @@ body{
 .quiz_box header{
     background-color:gray;
     height: 70px;
-    padding: 0 30px;
+    padding: 1.5rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -205,33 +166,28 @@ body{
 }
 /*Quiz Box Header and Title of Quiz font*/
 .quiz_box header .titleofquiz{
-    font-size:30px;
     font-weight:750;
 }
 /*Quiz Timer Header Timer Style*/
 .quiz_box header .timer{
     
     width: 150px;
-    height: 50px;
-    background-color:rgb(145, 71, 145);
     display:flex;
     justify-content: space-between;
     align-items:center;
-    border: 1px solid purple;
-    border-radius:10px;
-    padding: 0 8px; 
+    height: 50px;
+    padding: 0.2rem; 
 }
 /*Quiz Box Header Timer Ticktock Text font*/
 .quiz_box header .timer .ticktock_text{
+    font-size: calc(10px + min(1vw,4px));
     font-weight: 500;
-    font-size: 18px;
     user-select:none;
 }
 /*Quiz Box Header Timer Ticktock Seconds Style*/
 .quiz_box header .timer .ticktock_seconds{
     height:30px;
     width:70px;
-    font-size: 20px;
     font-weight:650;
     background:rgb(165, 104, 165);
     color:plum;
@@ -248,7 +204,6 @@ body{
 }
 /*Font Size and Font Weight of Quiz Questions*/
 .quiz_box section .questions_text{
-    font-size:25px;
     font-weight:700;
 }
 /*Quiz Box Section Choices List style*/
@@ -258,7 +213,6 @@ body{
 }
 /*Choice List Choices Style*/
 section .choices_list .choices{
-    font-size:20px;
     background-color: rgb(135, 96, 135);
     border:1px solid rgb(51, 22, 51);
     border-radius: 5px;
@@ -283,10 +237,9 @@ section .choices_list .choices:hover{
 }
 /*Choices List Choices Emoji Style*/
 .choices_list .choices .emoji{
-    font-size: 20px;
-    height:50px; 
-    width: 50px;
+    display: flex;
     text-align: center;
+    justify-content: center;
     line-height: 30px;
     border:5px solid transparent;
     border-radius: 50%;
@@ -329,10 +282,9 @@ footer .total_questions span p{
 }
 /*Footer Next Button Style*/
 footer .next_btn{
-    font-size: 18px;
+    color: white;
     font-weight: 500;
     background: rgb(141, 74, 141);
-    color: rgb(77, 19, 77);
     border:none;
     height: 50px;
     padding: 0 15px;
@@ -343,19 +295,19 @@ footer .next_btn{
     transition: all 0.10s ease;
 }
 /*Footer Next Button Hover Color*/
-footer .next_btn:hover{
+footer .next_btn:active{
     background:rgb(85, 55, 85);
 }
+
 /*Final Score and Enter Score Box Style*/
 .final_score_box, .enter_score_box{
     background: rgb(149, 111, 149);
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content: center;
     text-align: center;
     flex-direction:column;
     width: 500px;
-    padding: 35px 45px;
     border-radius:25px;
     opacity:0;
     pointer-events:none;
@@ -365,7 +317,7 @@ footer .next_btn:hover{
 /* Form styling */
 form {
     width: 200px;
-    height: auto;
+    height: 20%;
     size: 100%;
     display: flex;
     flex-direction: column;
@@ -380,20 +332,19 @@ form {
 
 /*Final Score Box Emoji Style*/
 .final_score_box .emoji{
-    font-size:200px;
+    font-size: 10rem;
     color:rgb(49, 9, 49);
     margin-bottom:20px;
 }
 /*Final Score Box Conclusion Text*/
 .final_score_box .conclusion_text{
-    font-size: 25px;
+    font-size: 1rem;
     font-weight: 750;
 }
 /*Final Score Box Final Score Text Span Style*/
 .final_score_box .final_score_text span{
-    font-size: 20px;
+    font-size: 0.8rem;
     font-weight: 500;
-    display: flex;
     margin: 15px 0;
 }
    
@@ -402,16 +353,11 @@ form {
     font-weight: 750;
     padding: 0 4px;
 }
-/*Final Score Buttons Style*/
-.final_score_box buttons{
-    display: flex;
-    margin: 20px 0;
-}
 .final_score_box .buttons button{
-    font-size:20px;
+    font-size: 1.2rem;
     font-weight:500;
     border-radius: 2px solid rgb(119, 72, 119);
-    margin: 0 20px;
+    margin: 0.5rem 1rem;
     padding: 10px 25px;
     height: 48px;
     border: none;
@@ -423,8 +369,7 @@ form {
 
 /* Classes for score entries */
 .score_entry {
-    background-color: mediumorchid;
-    font-size: 20px;
+    font-size: 1.2rem;
     margin: 0.5rem;
 }
 
@@ -446,38 +391,117 @@ form {
     justify-content: space-between;
 }
 
+/* Styling for the timer line */
+header .time_line {
+    width: 500px;
+    background-color:rgb(145, 71, 145);
+    border: 1px solid purple;
+    border-radius:10px;
+}
 
 
-/* Responisve styling for boxes */
-  
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .begin_btn button {
-        font-size: 32px;
-        padding: 1rem;
-    }
-    .hi_score_btn button {
-        font-size: 24px;
-        padding: 1rem;
-    }
-    .quiz_rules_box {
-        width: min(60vw, 650px);
-        height: auto;
-    }
-    .quiz_box {
-        width: min(60vw, 550px);
-        height: auto;
-    }
-    .final_score_box, .enter_score_box {
-        width: min(60vw, 500px);
-        height: auto;
-    }
-    .hi_score_box {
-        width: min(60vw, 550px);
-        height: auto;
-    }
-  } 
 
-  @media only screen and (max-width: 1024px) {
-    /* For tablets: */
-  } 
+
+
+/* Re-write of element styling to be responsive */
+
+/* Styling for boxes, and adjust for certain boxes */
+.box {
+    overflow: visible;
+    width: 80vw;
+    max-width: 600px;
+    padding: 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box header, .box footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.enter_score_box, .final_score_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+/* Adjustment for button, span, and h1 styling */
+button {
+    border-radius: 0.5rem;
+}
+
+span {
+    font-size: clamp(1rem, 1rem, 1.5rem);
+}
+
+h1 {
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+/* Adjustments for buttons styling */
+.buttons {
+    padding: 0.5rem 0.7rem;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 10rem;
+    max-width: 30vw;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.hi_score_box .buttons button{
+    max-width: 30%;
+}
+
+.box .buttons > button {
+    font-size: 1rem;
+}
+
+/* Styling for Begin and High Score Buttons */
+.main_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    box-shadow: none;
+}
+
+.begin_btn button, .hi_score_btn button{
+    width: 10rem;
+    display: flex;
+    padding: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 20vw;
+    min-width: 200px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 8px 0 rgb(184, 119, 184),
+                0px 8px 28px 0 rgb(184, 119, 184);
+}
+
+/* Adjustment for certain titles and spans */
+.quiz_box header .titleofquiz {
+    font-size: clamp(0.7rem, 1rem, 1.5rem);
+}
+
+.quiz_rules_list span {
+    font-size: 1em;
+}
+
+.choices span {
+    font-size: 1rem;
+}
+
+.quiz_box section > span {
+    font-size: 1em;
+}
+

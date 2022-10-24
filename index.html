@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,20 +30,19 @@
 </head>
 <body>
      <!-- Begin Quiz Button-->
-    <div class="buttons">
+    <div class=" main_buttons buttons">
         <div class="begin_btn"><button>Begin Quiz</button></div>
         <div class="hi_score_btn"><button>View High Scores</button></div>
     </div>
 
 
     <!-- Quiz Rules Box -->
-    <div class="quiz_rules_box">
+    <div class="quiz_rules_box box">
         <div class="quiz_rules_title">
-            <span>The Rules of This Quiz</span>
+            <h1>The Rules of This Quiz</h1>
         </div>
         <div class="quiz_rules_list">
-            <div class = "quizrules">1. You will given <span> 15 seconds </span>to answer each question.</div>
-            <!-- /* <div class= "font-effect-shadow-multiple">15 seconds</div> */ -->
+            <div class = "quizrules">1. You will given <span> 150 seconds </span>to complete the whole quiz.</div>
             <div class = "quizrules">2. Once you <span> select </span> an answer, you <span> can't </span> change your answer.</div>
             <div class = "quizrules">3. You will <span> lose 15 seconds </span> for each question you answer <span> incorrectly.</span></div>
             <div class = "quizrules">4. You will <span> not </span> be able to <span> exit the quiz once you click begin quiz.</span></div>
@@ -51,25 +64,19 @@
 
 
     <!-- High Score Box -->
-    <div class="hi_score_box inactive">
-        <div class="quiz_rules_title hi_score_title">
-            <span>High Scores</span>
+    <div class="hi_score_box box inactive">
+        <!-- Container with box title and score lists -->
+        <div class="top-container">
+            <div class="quiz_rules_title hi_score_title">
+                <h1>High Scores</h1>
+            </div>
+            <ol class="score_list">
+            </ol>
         </div>
-        <ol class="score_list">
-            <li class = "score_entry">Alec </li>
-            <li class = "score_entry">Beth </li>
-            <li class = "score_entry">Carl </li>
-            <li class = "score_entry">Dave </li>
-            <li class = "score_entry">Esau </li>
-            <li class = "score_entry">Fred </li>
-            <li class = "score_entry">Greg </li>
-            <li class = "score_entry">Hank </li>
-            <li class = "score_entry">Iggy </li>
-            <li class = "score_entry">Jake </li>
-        </ol>
 
          <!-- buttons for leave quiz and continue quiz -->
         <div class="buttons">
+            <button class="restart">Retake Quiz</button>
             <button class="main_menu">Leave Quiz</button>
             <button class="clear">Clear Scores</button>
         </div>
@@ -79,15 +86,15 @@
 
     
     <!-- Quiz Box -->
-    <div class="quiz_box">
+    <div class="quiz_box box">
         <header>
             <!-- Title of Quiz -->
-            <div class="titleofquiz">API Quiz Application</div>
+            <div class="titleofquiz">Coding Quiz Application</div>
             <div class="timer">
-                <!--Time leftover text -->
-                <div class="ticktock_text">Time Remaining</div>
-                <!--How many seconds are left shown-->
-                <div class="ticktock_seconds">Init...</div>
+                    <!--Time leftover text -->
+                    <div class="ticktock_text">Time Remaining</div>
+                    <!--How many seconds are left shown-->
+                    <div class="ticktock_seconds">Init...</div>
             </div>
         </header>
 
@@ -115,6 +122,10 @@
                     <!-- <div class="emoji grinstars"><i class='far fa-grin-stars' style='font-size:36px'></i></div> -->
                 </div>
             </div>
+             <!--Correctness of answer is shown here-->
+            <div class="correct_status">
+                Correct!
+            </div>
         </section>
 
         <!-- Footer of Quiz Box-->
@@ -130,7 +141,7 @@
 
 
     <!-- Final Score Box -->
-    <div class="final_score_box">
+    <div class="final_score_box box">
         <div class="emoji">
             <i class='fas fa-trophy'></i>
         </div>
@@ -146,24 +157,23 @@
             <!-- <button class="quit">Quit Quiz</button> -->
         </div>
     </div>
-     <!---->
 
 
 
 
 
-     <!-- Enter Hi Score Box -->
-     <div class="enter_score_box inactive">
-        <!-- Form for entering Hi Score -->
+     <!-- Enter High Score Box -->
+     <div class="enter_score_box box inactive">
+        <!-- Form for entering High Score -->
         <form class="score_form">
-            <label for="name">Enter Initial</label> 
+            <label for="name">Enter Initial:</label> 
             <input type="text" name="name">
             <div class="buttons">
                 <button type="submit" class="submit">Submit</button>
             </div>
         </form>
     </div>
-     <!--  -->
+  
 
 
 
