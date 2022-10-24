@@ -212,7 +212,7 @@ continue_btn.onclick = ()=>{
     startTimer(QUIZ_TIME_INIT); //calling startTimer function
 }
 
-// Initialise quiz metadata
+// Initialize quiz metadata
 let quizTime =  QUIZ_TIME_INIT;    // in seconds
 let question_count = 0;
 let question_number = 1;
@@ -394,15 +394,10 @@ function updateHighScoreList() {
     let scoreArray = JSON.parse(localStorage.getItem("highScores"));
     if (!Array.isArray(scoreArray)) {
         // Initialize the array
-        console.log("Initialising high scores")
+        console.log("Initializing high scores")
         localStorage.setItem("highScores", JSON.stringify([]));
         scoreArray = JSON.parse(localStorage.getItem("highScores"));
         }
-
-
-
-
-
 
     // Get score_entries and update their innerHTML
     let score_list = hi_score_box.querySelector(".score_list");
