@@ -21,14 +21,43 @@ Building a professional portolio was our second homework challenge by using both
 
 <a href=https://hannybear88.github.io/Web-APIs-Challenge-Code-Quiz/>Click here</a> to be directed straight to the deployed application
 
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+
+
+GIVEN I am taking a code quiz
+WHEN I click the begin quiz button
 <img src="./assets/images/HW4_main_page_screenshot.png" />
+
+THEN I am directed to the the quiz rules page
+WHEN I click on the continue quiz button
 <img src="./assets/images/HW4_quiz_rules_screenshot.png" /> 
+
+THEN a timer starts and I am presented with a question
 <img src="./assets/images/HW4_question_screenshot.png" /> 
+
+WHEN I answer a question
+THEN I am presented with another question
 <img src="assets/images/HW4_correct_answer_screenshot.png" /> 
+
+
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
 <img src="./assets/images/HW4_incorrect_answer_screenshot.png" /> 
+
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
 <img src="./assets/images/HW4_end_of_quiz_screenshot.png" /> 
+
+THEN I can save my initials and score
 <img src="./assets/images/HW4_enter_initials_screenshot.png" /> 
 <img src="./assets/images/HW4_high_score_screenshot.png" /> 
+
+
+WHEN I click submit to save my initials and score 
+THEN I can clear my scores or retake the quiz to get a better score.
 <img src="./assets/images/HW4_clear_high_scores_screenshot.png" /> 
 
 
@@ -40,6 +69,5 @@ If you need extra support feel free to <a href="mailto:hannahkchung88@gmail.com"
 Hannah Chung
 
 ## Contributors
-<ul>
-    <li>Code by Hannah Chung</li>
-</ul>
+
+Code by Hannah Chung
