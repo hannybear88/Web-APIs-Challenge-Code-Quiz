@@ -30,6 +30,7 @@ Building a professional portolio was our second homework challenge by using both
 <img src="./assets/images/HW#4_enter_initials_screenshot.png" /> 
 <img src="./assets/images/HW#4_high_score_screenshot.png" /> 
 <img src="./assets/images/HW#4_clear_high_scores_screenshot.png" /> 
+<img src="./assets/images/HW#4_clear_high_scores_screenshot.png"> 
 
 ## Support
 If you need extra support feel free to <a href="mailto:hannahkchung88@gmail.com">email me</a>
