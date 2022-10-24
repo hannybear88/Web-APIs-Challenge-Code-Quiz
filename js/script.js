@@ -75,7 +75,7 @@ let questions = [
     choices: [
         'A. The first, or opening, HTML tag',
         'B. HTML code that does not require opening or closing tags',
-        'C. An HTML tag adn the content that it contains or marks up',
+        'C. An HTML tag and the content that it contains or marks up',
         'D. The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.',
     ],
     correctAnswer: 3 // 'C. An HTML tag and the content that it contains or marks up',

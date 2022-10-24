@@ -60,9 +60,19 @@ THEN I can save my initials and score
 
 WHEN I click submit to save my initials and score 
 THEN I can clear my scores or retake the quiz to get a better score.
+Note: I don't have to clear my scores to retake the quiz. That is up to the user. 
 <img src="./assets/images/HW4_clear_high_scores_screenshot.png" /> 
 
-Here is a video of how the quiz works. You can see that it shows when the user answers the questions correctly or incorrectly. This video also shows that it has a responsive layout to both mobiles and tablets. <img src="./assets/images/Coding_Quiz_Challenge_Screen_Recording.gif"/> 
+Here are 3 videos of how the quiz works. You can see that they each show when the user answers the questions correctly or incorrectly, they can enter their initials at the end fo the quiz, save their scores, view their highscores and retake the quiz again as many times as they'd like. These videos also show that they have a responsive layout to laptops, mobiles, and tablets. 
+
+Here is video for when the quiz is play on a laptop.
+<img src="./assets/images/Coding_Quiz_Challenge_Screen_Recording_Laptop.gif"/> 
+
+Here is a video on when the quiz played on a tablet. 
+<img src="./assets/images/Coding_Quiz_Challenge_Screen_Recording_Tablet.gif"/> 
+
+Here is a video on when the quiz is play on a mobile. 
+<img src="./assets/images/Coding_Quiz_Challenge_Screen_Recording_Mobile.gif"/> 
 
 ## Support
 If you need extra support feel free to <a href="mailto:hannahkchung88@gmail.com">email me</a>
