@@ -22,23 +22,14 @@ Building a professional portolio was our second homework challenge by using both
 <a href=https://hannybear88.github.io/Web-APIs-Challenge-Code-Quiz/>Click here</a> to be directed straight to the deployed application
 
 <img src="./assets/images/HW4_main_page_screenshot.png" />
-<img src="./assets/images/HW4_quiz_rules_screenshot.png.png" /> 
-<img src="./assets/images/HW4_question_screenshot.png.png" /> 
+<img src="./assets/images/HW4_quiz_rules_screenshot.png" /> 
+<img src="./assets/images/HW4_question_screenshot.png" /> 
 <img src="assets/images/HW4_correct_answer_screenshot.png" /> 
-<img src="./assets/images/HW#4_incorrect_answer_screenshot.png" /> 
+<img src="./assets/images/HW4_incorrect_answer_screenshot.png" /> 
 <img src="./assets/images/HW4_end_of_quiz_screenshot.png" /> 
 <img src="./assets/images/HW4_enter_initials_screenshot.png" /> 
 <img src="./assets/images/HW4_high_score_screenshot.png" /> 
 <img src="./assets/images/HW4_clear_high_scores_screenshot.png" /> 
-
-![alt text](assets/images/HW#4_main_page_screenshot.png)
-<!-- ![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png)
-![alt text](http://url/to/./assets/images/HW#4_main_page_screenshot.png) -->
 
 
 ## Support

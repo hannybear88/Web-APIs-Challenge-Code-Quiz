@@ -25,7 +25,7 @@ let questions = [
         'A. Commas',
         'B. Curly Brackets',
         'C. Quotes', 
-        'D. Parenthesis',
+        'D. Parentheses',
     ],
     correctAnswer: 3 //'C. Quotes',
 },
@@ -54,7 +54,7 @@ let questions = [
     choices: [
         'A. Quotes',
         'B. Curly Brackets',
-        'C. Parenthesis',
+        'C. Parentheses',
         'D. Square Brackets',
     ],
     correctAnswer: 3 // 'C. Parentheses',
@@ -392,7 +392,18 @@ function submitScore(name) {
 function updateHighScoreList() {
     // Get scores array form localStorage
     let scoreArray = JSON.parse(localStorage.getItem("highScores"));
-    
+    if (!Array.isArray(scoreArray)) {
+        // Initialize the array
+        console.log("Initialising high scores")
+        localStorage.setItem("highScores", JSON.stringify([]));
+        scoreArray = JSON.parse(localStorage.getItem("highScores"));
+        }
+
+
+
+
+
+
     // Get score_entries and update their innerHTML
     let score_list = hi_score_box.querySelector(".score_list");
     let newInnerHTML = ``;
