@@ -392,7 +392,7 @@ function submitScore(name) {
 function updateHighScoreList() {
     // Get scores array form localStorage
     let scoreArray = JSON.parse(localStorage.getItem("highScores"));
-
+    
     // Get score_entries and update their innerHTML
     let score_list = hi_score_box.querySelector(".score_list");
     let newInnerHTML = ``;
