@@ -75,7 +75,7 @@ let questions = [
     choices: [
         'A. The first, or opening, HTML tag',
         'B. HTML code that does not require opening or closing tags',
-        'C. An HTML tag and the content that it contains or marks up',
+        'C. An HTML tag adn the content that it contains or marks up',
         'D. The second, or closing, HTML tag. Closing tags have a forward slash (/) inside of them.',
     ],
     correctAnswer: 3 // 'C. An HTML tag and the content that it contains or marks up',
@@ -120,7 +120,7 @@ const QUIZ_TIME_INIT = 150;     // in seconds
 const INCORRECT_PENALTY = 15;   // in seconds
 const TIMER_DELAY = 50;         // in microseconds, higher value messes with timer()
 const TIMER_LINE_WIDTH = 500;   // in px
-const TIME_LINE_ENABLED = false; // enable the time line if needed
+const TIME_LINE_ENABLED = true; // enable the time line if needed
         
         
 //selecting all required elements
@@ -142,7 +142,7 @@ const enter_score_box = document.querySelector(".enter_score_box");
 const submit_btn = enter_score_box.querySelector(".buttons  .submit")
 const quit_btn = final_score_box.querySelector(".buttons .quit");
 const choices_list = document.querySelector(".choices_list");
-const time_line = document.querySelector("header .timer");
+const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .ticktock_text");
 const timeCount = document.querySelector(".timer .ticktock_seconds");
 const conclusion_text = document.querySelector(".conclusion_text");
@@ -221,6 +221,7 @@ let counter;
 let counterLine;
 let isWrongAnswerSelected = false;
 const quit_quiz = final_score_box.querySelector(".buttons .quit");
+const max_time_line_width = parseInt(getComputedStyle(time_line).width, 10); // extract timer line width
 
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
@@ -314,7 +315,7 @@ function choiceselected(answer, isChoiceSelected){
     if(userAns == correcAns){ //if user selected choice is equal to array's correct answer
         userScore += CORRECT_BONUS; //upgrading score value with the set bonus
         answer.classList.add("correct"); //adding green color to correct selected choice
-        answer.insertAdjacentHTML("beforeend", grinFaceTag); //adding grinFace icon to correct selected choice
+        answer.insertAdjacentHTML("beforeend", grinFaceTag); //adding grin face icon to correct selected choice
 
         answerStatusText = "Correct!"
         console.log("Correct Answer");
@@ -390,14 +391,14 @@ function submitScore(name) {
 
 // Update the high scores with the latest localStorage data
 function updateHighScoreList() {
-    // Get scores array form localStorage
+    // Get scores array form localStorage, checking if it exist first
     let scoreArray = JSON.parse(localStorage.getItem("highScores"));
     if (!Array.isArray(scoreArray)) {
         // Initialize the array
         console.log("Initializing high scores")
         localStorage.setItem("highScores", JSON.stringify([]));
         scoreArray = JSON.parse(localStorage.getItem("highScores"));
-        }
+    }
 
     // Get score_entries and update their innerHTML
     let score_list = hi_score_box.querySelector(".score_list");
@@ -412,13 +413,12 @@ function updateHighScoreList() {
 // Start and maintain quiz timer
 function startTimer(time){
     // note that "time" is in seconds
-    const max_time_line_width = 500;
     const counter_second_init = 1000/TIMER_DELAY;
     const line_counter_max = time*counter_second_init;  // the maximum value for line width counter
 
+    time_line.style.width = max_time_line_width + "px"; //refresh time line
     let counter_second = counter_second_init;           // count to a second for the timer
     counter = setInterval(timer, TIMER_DELAY);
-
     function timer(){
         timeCount.textContent = time; //changing the value of timeCount with time value
         counter_second--;    //decrement the second counter
@@ -454,12 +454,12 @@ function startTimer(time){
             for(i=0; i < allchoices; i++){
                 if(choices_list.children[i].textContent == correcAns){ //if there is an choice which is matched to an array answer
                     choices_list.children[i].setAttribute("class", "choice correct"); //adding green color to matched choice
-                    choices_list.children[i].insertAdjacentHTML("beforeend", grinFaceTag); //adding grin face tag icon to matched choice
+                    choices_list.children[i].insertAdjacentHTML("beforeend", grinFaceTag); //adding grin face icon to matched choice
                     console.log("Time Off: Auto selected correct answer.");
                 }
             }
             for(i=0; i < allchoices; i++){
-                choices_list.children[i].classList.add("disabled"); //once user select an choice then disabled all choices
+                choices_list.children[i].classList.add("disabled"); //once user selects a choice then disabled all choices
             }
             next_btn.classList.add("show"); //show the next button if user selected any choice
             conclusion_text.innerHTML = "Quiz is Over!";

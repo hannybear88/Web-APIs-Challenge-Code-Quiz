@@ -28,18 +28,19 @@
             <h1>The Rules of This Quiz</h1>
         </div>
         <div class="quiz_rules_list">
-            <div class = "quizrules">1. You will given <span> 150 seconds </span>to complete the quiz.</div>
+            <div class = "quizrules">1. You will given <span> 150 seconds </span>to complete the whole quiz.</div>
             <div class = "quizrules">2. Once you <span> select </span> an answer, you <span> can't </span> change your answer.</div>
             <div class = "quizrules">3. You will <span> lose 15 seconds </span> for each question you answer <span> incorrectly.</span></div>
             <div class = "quizrules">4. You will <span> not </span> be able to <span> leave once you click continue to quiz.</span></div>
             <div class = "quizrules">5. You will <span> not </span> be able to select any other button once the <span>timer starts.</span></div>
-            <div class = "quizrules">6. You will be given a score of how you did on the quiz.</div>
-            <div class = "quizrules">7. You will be asked to put in your initials after taking the quiz.</div>
+            <div class = "quizrules">6. You will be given a score once you have complete the quiz.</div>
+            <div class = "quizrules">7. You will be asked to put in your initials after completing the quiz.</div>
             <div class = "quizrules">8. You may save your scores.</div>
-            <div class = "quizrules">9. You may look at your previous scores.</div>
+            <div class = "quizrules">9. You may look your previous scores.</div>
             <div class = "quizrules">10. You may retake the quiz as many times as you'd like.</div>
             <div class = "quizrules">11. Do your <span>BEST</span> and have <span>FUN!!</span></div>
         </div>
+
 
          <!-- buttons for leave quiz and continue quiz -->
         <div class="buttons">
@@ -77,12 +78,16 @@
     <div class="quiz_box box">
         <header>
             <!-- Title of Quiz -->
-            <div class="titleofquiz">Coding Quiz Challenge</div>
-            <div class="timer">
-                    <!--Time leftover text -->
-                    <div class="ticktock_text">Time Remaining</div>
-                    <!--How many seconds are left shown-->
-                    <div class="ticktock_seconds">Init...</div>
+            <div class="titleofquiz">Coding Quiz Application</div>
+            <div class="time_container">
+                <div class="timer">
+                        <!--Time leftover text -->
+                        <div class="ticktock_text">Time Remaining</div>
+                        <!--How many seconds are left shown-->
+                        <div class="ticktock_seconds">Init...</div>
+                </div>
+                <!-- Timer Line -->
+                <div class="time_line"></div>
             </div>
         </header>
 
@@ -161,6 +166,9 @@
             </div>
         </form>
     </div>
+    
+
+
 
 
      <script src="js/script.js"></script>
